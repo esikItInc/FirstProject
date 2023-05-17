@@ -33,7 +33,18 @@
     <div style="padding-top: 20px;">
         <div class="row justify-content-end">
             <div class="col-md-2">
+                <?php
+                $authUser = new \Framework\Auth\AuthUser();
+                if ($authUser->user()){
+                    ?>
                 <a class="btn btn-primary" href="createArticle.php">Написать статью</a>
+                <?php
+                } else {
+                ?>
+                <a class="btn btn-primary" href="#">Зарегестрируйтесь чтобы написать свою статью</a>
+                <?php
+                }
+                ?>
             </div>
         </div>
         <div class="col-md-12">

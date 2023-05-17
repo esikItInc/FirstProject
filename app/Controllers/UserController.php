@@ -10,7 +10,7 @@ class  UserController
     {
         $users = new User();
         $users = $users->get();
-        require_once 'resources/views/index.php';
+        require_once 'resources/views/profile.php';
     }
 
     public function store()

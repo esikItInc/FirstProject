@@ -42,12 +42,11 @@ class DataBase
 
         foreach ($data as $key => $value) {
             $colums[] = $key;
-            $values[] = $value;
+            $values[] = '"'.$value.'"';
         }
 
-//        $values = implode(',', $values);
-//        $values = trim($values);
-        dd($values);
+        $values = implode(',', $values);
+        $values = trim($values);
         $colums = implode(',', $colums);
         $colums = trim($colums);
 
