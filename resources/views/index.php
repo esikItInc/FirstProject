@@ -48,7 +48,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="registration.php">Регистрация</a>
                 </li>
-<<<<<<< HEAD
                 <li class="nav-item">
                     <a class="nav-link" href="#">
                         <?php
@@ -59,8 +58,6 @@
                         ?>
                     </a>
                 </li>
-=======
->>>>>>> a7f9b586293d3d12cfc8515c82dd45ee8e4957a8
             </ul>
         </div>
     </div>

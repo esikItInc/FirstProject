@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 <?php
 session_start();
 ?>
-=======
->>>>>>> a7f9b586293d3d12cfc8515c82dd45ee8e4957a8
 <!doctype html>
 <html lang="en">
 <head>
@@ -36,7 +33,6 @@ session_start();
 </nav>
 
 <div class="container">
-<<<<<<< HEAD
     <?php
 
         if (isset($_GET['error']))
@@ -44,8 +40,6 @@ session_start();
             echo "<p>Неправлиьный логин или пароль!</p>";
         }
     ?>
-=======
->>>>>>> a7f9b586293d3d12cfc8515c82dd45ee8e4957a8
     <form action="/user/login" method="post">
     <div style="padding-top: 20px;">
         <div class="row justify-content-center">
