@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Models\Articles;
 use App\Models\ArticlesTopic;
-use App\Models\Comment;
+
 
 class  ArticlesController
 {
@@ -40,21 +40,10 @@ class  ArticlesController
     {
         $articles = new Articles();
         $articles = $articles->get();
-        foreach ($articles as $key => $article)
-        {
-            $comments = new Comment();
-            $comments = $comments->ArticlesId($article[0]);
-            $articles[$key]['comments'] = $comments;
-        }
+
         require_once "resources/views/article.php";
     }
-    public function createComm()
-    {
 
-        $comments = new Comment();
-        $comment = $comments->create($_POST);
-        header('location: /');
-    }
 
 
 }

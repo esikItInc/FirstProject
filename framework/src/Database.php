@@ -37,20 +37,19 @@ class DataBase
 
     function create($table, $data)
     {
-
         $colums = [];
         $values = [];
+
         foreach ($data as $key => $value) {
             $colums[] = $key;
-            $values[] = '"'.$value.'"';
+            $values[] = $value;
         }
 
-
+//        $values = implode(',', $values);
+//        $values = trim($values);
+        dd($values);
         $colums = implode(',', $colums);
         $colums = trim($colums);
-        $values = implode(',', $values);
-        $values = trim($values);
-
 
 
 
@@ -59,6 +58,7 @@ class DataBase
         $maxId = mysqli_fetch_assoc($maxId);
         return $this->whereId($table, $maxId['id']);
     }
+
     public function whereId($table, $id)
     {
         $query = mysqli_query($this->connection, "SELECT * FROM $table WHERE id = $id");

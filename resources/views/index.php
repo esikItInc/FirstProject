@@ -1,26 +1,3 @@
-<!--<!doctype html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-<!--    <meta charset="UTF-8">-->
-<!--    <meta name="viewport"-->
-<!--          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
-<!--    <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
-<!--    <title>Document</title>-->
-<!--</head>-->
-<!--<body>-->
-<!--<h3>Список пользователей</h3>-->
-
-<!--<form action="/users/store" method="post" enctype="multipart/form-data">-->
-<!--    <label for="name">Имя</label>-->
-<!--    <input type="text" name="name" id="name" placeholder="Введите имя">-->
-<!--    <label for="lastname">Имя</label>-->
-<!--    <input type="text" name="lastname" id="lastname" placeholder="Введите имя">-->
-<!--    <input type="file" name="file">-->
-<!--    <button type="submit">Создать</button>-->
-<!--</form>-->
-<!--</body>-->
-<!--</html>-->
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -49,7 +26,7 @@
                     <a class="nav-link" href="registration.php">Регистрация</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="profile.php">
                         <?php
                         $authUser = new \Framework\Auth\AuthUser();
                         if ($authUser->user()){

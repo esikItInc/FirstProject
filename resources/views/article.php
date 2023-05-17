@@ -65,28 +65,6 @@
             </div>
         </div>
 
-            <div class="col-md-12">
-                <p>Комментарии</p>
-                <form action="/create/comment" method="post">
-                    <input  type="text" placeholder="Имя автора"  name="user_name">
-                    <input  type="text" placeholder="Ваш комментарий"  name="description">
-                    <input type="hidden" name="articles_id" value="'<?=$article_id ?>'">
-                    <button type="submit" class="btn btn-dark">Оставить комментарий</button>
-                </form>
-                <?php
-
-            foreach ($articles as $key => $comment)
-            {
-                   foreach ($comment['comments'] as $comm) {;
-                       if ($_GET['id'] == $comm[3])
-                       {
-                           echo "<p><b>$comm[1]</b></p>";
-                           echo "<p>$comm[2]</p>";
-                           echo "<br>";
-                       }
-                   }
-            }
-            ?>
             </div>
 
 

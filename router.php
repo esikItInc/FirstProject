@@ -1,6 +1,5 @@
 <?php
 
-
 $id = null;
 
 if ($_SERVER['REQUEST_URI'] == '/')
@@ -63,15 +62,12 @@ if ($_SERVER['REQUEST_URI'] == "/article.php?id=" . $id)
     $controller = new \App\Controllers\ArticlesController();
     $controller->somearticle();
 }
-if ($_SERVER['REQUEST_URI'] == "/create/comment")
+
+if ($_SERVER['REQUEST_URI'] == "/profile.php" . $id)
 {
-    $controller = new \App\Controllers\ArticlesController();
-    $controller->createComm();
+    $controller = new \App\Controllers\UserController();
+    $controller->index();
 }
-
-
-
-
 
 
 
