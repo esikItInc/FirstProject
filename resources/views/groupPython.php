@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<?php
-session_start();
-?>
-=======
->>>>>>> a7f9b586293d3d12cfc8515c82dd45ee8e4957a8
 <!doctype html>
 <html lang="en">
 <head>
@@ -25,7 +19,7 @@ session_start();
                     <a class="nav-link" href="/">Главная</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/">Авторизация</a>
+                    <a class="nav-link" href="login.php">Авторизация</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="registration.php">Регистрация</a>
@@ -36,36 +30,42 @@ session_start();
 </nav>
 
 <div class="container">
-<<<<<<< HEAD
-    <?php
-
-        if (isset($_GET['error']))
-        {
-            echo "<p>Неправлиьный логин или пароль!</p>";
-        }
-    ?>
-=======
->>>>>>> a7f9b586293d3d12cfc8515c82dd45ee8e4957a8
-    <form action="/user/login" method="post">
     <div style="padding-top: 20px;">
-        <div class="row justify-content-center">
-            <div class="col-md-7 border">
-                <h3>Авторизация</h3>
-                <div class="form-group">
-                    <label for="email" class="col-form-label">Email</label>
-                    <input type="text" required name="email" class="form-control" id="email">
+        <div class="row justify-content-end">
+            <div class="col-md-2">
+                <a class="btn btn-primary" href="createArticle.html">Написать статью</a>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <h3 class="display-5">
+                <?php
+                foreach ($articles as $article)
+                {
+                    if ($article[3] == "PYTHON")
+                    {
+                        echo $article[3];
+                    }
+                }
+
+                ?>
+            </h3>
+        </div>
+        <div class="col-md-12 border-bottom">
+            <div class="row">
+                <div class="col-4">
+                    <a href="article.html">Статья 1</a>
                 </div>
-                <div class="form-group">
-                    <label for="password" class="col-form-label">Пароль</label>
-                    <input type="password" required name="password" class="form-control" id="password">
-                </div>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-dark">Войти</button>
+            </div>
+        </div>
+        <div class="col-md-12 border-bottom">
+            <div class="row">
+                <div class="col-4">
+                    <a href="article.html">Статья 2</a>
                 </div>
             </div>
         </div>
     </div>
-    </form>
+
 </div>
 
 

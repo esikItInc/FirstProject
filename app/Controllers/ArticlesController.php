@@ -32,8 +32,14 @@ class  ArticlesController
 
     public function createArticle()
     {
+<<<<<<< HEAD
         $articl = new Articles();
         $artic = $articl->create($_POST);
+=======
+
+        $articl = new Articles();
+        $artic = $articl->articleCreate($_POST);
+>>>>>>> a7f9b586293d3d12cfc8515c82dd45ee8e4957a8
         header('location: /');
     }
     public function somearticle()
@@ -57,6 +63,10 @@ class  ArticlesController
     }
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> a7f9b586293d3d12cfc8515c82dd45ee8e4957a8
 }
 
 

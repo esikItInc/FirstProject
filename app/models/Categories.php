@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Framework\Src\Model;
 
-class User extends Model
+class Categories extends Model
 {
-    protected $table = 'users';
+    protected $table = 'categories';
     protected $storagePath;
     public function setStoragePath($path)
     {
